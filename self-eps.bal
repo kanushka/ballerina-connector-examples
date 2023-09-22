@@ -18,7 +18,7 @@ service on new http:Listener(0) {
             a1Notation: "",
             values: []
         });
-    sheets:Spreadsheet openSpreadsheetByUrlResponse = check self.sheetsEp->openSpreadsheetByUrl(url = "");
+        sheets:Spreadsheet openSpreadsheetByUrlResponse = check self.sheetsEp->openSpreadsheetByUrl(url = "");
     }
 }
 
