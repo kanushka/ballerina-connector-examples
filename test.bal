@@ -8,14 +8,9 @@ service on new http:Listener(0) {
 
     resource function get members() returns json|error? {
         // function level endpoint
-        // http:Client payEp = check new (url = "/pay");
-        // json getResponse = check userEp->/;
-        // json getResponse1 = check self.contactEp->/;
-        // function level endpoint
-                // http:Client payEp = check new (url = "/pay");
-                // json getResponse = check userEp->/;
-                // json getResponse1 = check self.contactEp->/;
-                json postResponse = check self.userEp->/.post(message = ());
+        http:Client payEp = check new (url = "/pay");
+        json getResponse = check self.userEp->/;
+        json postResponse = check self.userEp->/.post(message = ());
     }
 
     // service level endpoint
